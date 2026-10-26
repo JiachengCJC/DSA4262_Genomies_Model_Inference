@@ -1,0 +1,11 @@
+# H04 inference; preserve compatibility with the fitted model.
+numpy==2.5.3
+pandas==3.0.6
+pyarrow==25.0.1
+joblib==1.6.0
+scikit-learn==1.9.1
+scipy==1.18.1
+threadpoolctl==3.7.0
+
+# Kernel for notebooks/inference.ipynb in VS Code.
+ipykernel==7.3.0
