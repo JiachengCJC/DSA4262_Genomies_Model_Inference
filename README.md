@@ -19,14 +19,14 @@ These are starting recommendations, not benchmarked minimum requirements. The `t
 
 ## 2. Clone the project and install dependencies
 
-After connecting to your AWS instance, run these commands **in the AWS terminal** to clone the GitHub repository and install dependencies. Replace `YOUR_REPOSITORY_URL` with the project's HTTPS clone URL, copied from **GitHub → Code → HTTPS**. Private repositories require GitHub authentication on the instance.
+After connecting to your AWS instance, run these commands **in the AWS terminal** to clone the GitHub repository and install dependencies.
 
 ```bash
 sudo apt update
 sudo apt install -y git python3 python3-venv python3-pip
 
 cd ~
-git clone YOUR_REPOSITORY_URL DSA4262_Genomies_Model_Inference
+git clone https://github.com/JiachengCJC/DSA4262_Genomies_Model_Inference DSA4262_Genomies_Model_Inference
 cd DSA4262_Genomies_Model_Inference
 
 python3 -m venv .venv
@@ -154,7 +154,7 @@ The command exports only the result columns listed above; input features, extra 
 ## Troubleshooting
 
 - **Missing package:** activate `.venv` and finish installing `requirements.txt` from step 2.
-- **Cannot clone the repository:** check the repository URL and your GitHub access. A private repository requires authentication.
+- **Cannot clone the repository:** check the repository URL and your GitHub access.
 - **Cannot find the model or input data:** check that those files were downloaded onto AWS and that your `--model` and `--input` paths match their locations.
 - **`FileExistsError`:** choose a new `--output-dir` and rerun the script.
 - **`No matching distribution found`:** check that Python is 3.12 and your package index provides the pinned versions.
